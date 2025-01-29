@@ -2,12 +2,15 @@
 
 import { useState } from "react"
 import Image from "next/image"
+import nextConfig from "../../next.config.mjs";
+const BASE_PATH = nextConfig.basePath || "";
+
 
 const portfolioItems = [
-  { id: 1, before: "/assets/images/comp.png", after: "/assets/images/laph.png", alt: "Character 1" },
-  { id: 2, before: "/assets/images/comp.png", after: "/assets/images/laph.png", alt: "Character 2" },
-  { id: 3, before: "/assets/images/comp.png", after: "/assets/images/laph.png", alt: "Character 3" },
-  { id: 4, before: "/assets/images/comp.png", after: "/assets/images/laph.png", alt: "Character 4" },
+  { id: 1, before: `${BASE_PATH}/assets/images/comp.png`, after: `${BASE_PATH}/assets/images/laph.png`, alt: "Character 1" },
+  { id: 2, before: `${BASE_PATH}/assets/images/comp.png`, after: `${BASE_PATH}/assets/images/laph.png`, alt: "Character 2" },
+  { id: 3, before: `${BASE_PATH}/assets/images/comp.png`, after: `${BASE_PATH}/assets/images/laph.png`, alt: "Character 3" },
+  { id: 4, before: `${BASE_PATH}/assets/images/comp.png`, after: `${BASE_PATH}/assets/images/laph.png`, alt: "Character 4" },
 ]
 
 export default function PortfolioSection() {

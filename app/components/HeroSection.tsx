@@ -7,8 +7,11 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 
+import nextConfig from "../../next.config.mjs";
+ const BASE_PATH = nextConfig.basePath || "";
+
 function Model() {
-  const { scene } = useGLTF("/assets/3d/duck.glb")
+  const { scene } = useGLTF(`${BASE_PATH}/assets/3d/duck.glb`)
   return <primitive object={scene} scale={2} position={[0, -1, 0]} rotation={[0.3, 3.8, 0]} />
 }
 
